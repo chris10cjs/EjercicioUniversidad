@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Curso Ingreso UTN FRA</title>
+		<script type="text/javascript" src="practicaUniversidad.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	</head>
+	<body>
+        <div class="container" >
+      <div class="alert alert-warning  " style="margin-top: 20px;margin-bottom: 20px;" role="alert">
+            <h4 class="alert-heading">Estadística</h4>
+            <p>Se requiere generar un sistema para realizar estadísticas sobre los egresados en la universidad. <br></p>
+            <hr>
+            <p class="mb-0">Si tenes alguna duda, consulta por <b> slack!! </b></p>
+        </div>
+        <div style="padding:20px 20px; background-color: #f8f9fa; ">
+            <h6>1.  El alumno deberá ingresar:</h6>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> Nombre del alumno</li>
+                <li class="list-group-item">Carrera (Programación, Psicología, Diseño gráfico)</li>
+                <li class="list-group-item">Estado de la carrera: en curso-abandono-finalizado</li>
+                <li class="list-group-item">Sexo (femenino-masculino-nobinario)</li>
+                <li class="list-group-item">Edad (18 o más)</li>
+                <li class="list-group-item">Nota (entre 1 y 10)</li>
+            </ul>
+
+        </div>
+        <div style="padding: 0 20px 20px 20px; background-color: #f8f9fa; margin-bottom: 10px; ">
+            <h6>2.  Se desconoce la cantidad de alumnos que se ingresaran.</h6>
+            <h6>3.  Se deberán validar los casos resaltados en negrita. </h6>
+            <h6>4.  El programa deberá informar a través del documento html:</h6>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">A.  Cantidad total de alumnos de cada carrera.</li>
+                <li class="list-group-item">B.  Cantidad total de mujeres que cursan la carrera de programación</li>
+                <li class="list-group-item">C.  Cantidad de alumnos no binarios.</li>
+                <li class="list-group-item">D.  Promedio de notas de los alumnos finalizantes.</li>
+                <li class="list-group-item">E.  Nombre, sexo y edad del alumno mas viejo en la carrera de psicología.</li>
+                <li class="list-group-item">F.  Nombre, nota y estado de la carrera del mejor alumno no binario que estudia psicología.)</li>
+                <li class="list-group-item">G.  ¿Cuál es la carrera que tiene más alumnos?</li>
+            </ul>
+            
+        </div>
+
+        <button type="button" class="btn btn-primary " onclick="probarEjercicio()">Probar el ejercicio</button>
+        </div>
+        
+    </body>
+</html>
