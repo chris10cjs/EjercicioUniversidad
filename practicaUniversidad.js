@@ -41,6 +41,7 @@ function probarEjercicio()
 	var alumnoNobinarioPsicologia;
 	var notaAlumnoNobinarioPsicologia;
 	var estadoCarreraAlumnoNobinarioPsicologia;
+	var bandera;
 
 	cantidadAlumnosDiseño = 0;
 	cantidadAlumnosProgramacion = 0;
@@ -49,6 +50,7 @@ function probarEjercicio()
 	cantidadNobinario = 0;
 	acumuladorNota = 0;
 	finalizantes = 0;
+	bandera = 0;
 
 	do
 	{
@@ -123,12 +125,30 @@ function probarEjercicio()
 			break;
 			case "psicologia":
 				cantidadAlumnosPsicologia ++;
-				//alumno mas viejo?
-				//mejor alumno nobinario?
+				//alumno mas viejo
+				if(bandera == 0)
+				{
+					edadAlumnoViejoPsicologia = edad;
+					alumnoViejoPsicologia = alumno;
+					sexoAlumnoViejoPsicologia = sexo;
+					notaAlumnoNobinarioPsicologia = nota;
+				}
+				if(edad > edadAlumnoViejoPsicologia)
+				{
+					edadAlumnoViejoPsicologia = edad;
+					alumnoViejoPsicologia = alumno;
+					sexoAlumnoViejoPsicologia = sexo;
+				}
+				//mejor alumno nobinario
+				if(nota > notaAlumnoNobinarioPsicologia)
+				{
+					notaAlumnoNobinarioPsicologia = nota;
+					alumnoNobinarioPsicologia = alumno;
+					estadoCarreraAlumnoNobinarioPsicologia = estadoCarrera;
+				}
 			break;
 		}
-
-			//Carrera con más alumnos?
+		//Carrera con más alumnos?
 		
 		//-------Alumnas Programación y total no binarios----------
 		switch(sexo)
@@ -164,6 +184,8 @@ function probarEjercicio()
 	document.write("La cantidad de mujeres de programacion son " + cantidadMujeresProgramacion + "<br>");
 	document.write("La cantidad de no binarios son " + cantidadNobinario + "<br>");
 	document.write("El promedio de nota de alumnos egresados es " + promedioNotaFinalizantes + "<br>");
+	document.write("El alumno mas viejo en Psicología es " + alumnoViejoPsicologia + " y la edad es " + edadAlumnoViejoPsicologia + " y es de sexo " + sexoAlumnoViejoPsicologia +  "<br>");
+	document.write("El mejor alumno no binario en Psicología es " + alumnoNobinarioPsicologia + " y su nota es " + notaAlumnoNobinarioPsicologia + " y su estado en la carrera es: " + estadoCarreraAlumnoNobinarioPsicologia +  "<br>");
 	
 
 }
